@@ -238,3 +238,7 @@ p {
 .footer .footer-links a{
     color: #000;
 }
+
+.justified-text {
+    text-align: justify;
+}
