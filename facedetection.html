@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تشخیص چهره با استفاده از WebSocket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #videoContainer {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        #videoElement {
+            width: 80%;
+            border: 2px solid #ccc;
+        }
+        #facesContainer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .faceImage {
+            margin: 5px;
+            width: 150px;
+            height: 150px;
+        }
+        #uploadButton {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #uploadButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>تشخیص چهره در ویدیو</h1>
+    <div id="videoContainer">
+        <video id="videoElement" controls autoplay></video>
+    </div>
+
+    <h2>چهره‌های شناسایی‌شده:</h2>
+    <div id="facesContainer"></div>
+
+    <input type="file" id="videoInput" accept="video/*">
+    <button id="uploadButton" disabled>ارسال ویدیو</button>
+
+    <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
+    <script>
+        var socket = io.connect('http://127.0.0.1:5000');  // ارتباط WebSocket با سرور
+        var videoElement = document.getElementById('videoElement');
+        var facesContainer = document.getElementById('facesContainer');
+        var videoInput = document.getElementById('videoInput');
+        var uploadButton = document.getElementById('uploadButton');
+
+        // دریافت چهره‌های جدید از سرور از طریق WebSocket
+        socket.on('new_face', function(data) {
+            var faceImage = new Image();
+            faceImage.src = data.face_url;
+            faceImage.className = 'faceImage';
+            facesContainer.appendChild(faceImage);
+        });
+
+        // ارسال ویدیو از کاربر به سرور
+        uploadButton.addEventListener('click', function() {
+            var file = videoInput.files[0];
+            if (file) {
+                var formData = new FormData();
+                formData.append('video', file);
+
+                fetch('http://127.0.0.1:5000/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("چهره‌ها دریافت شدند:", data);
+                })
+                .catch(error => {
+                    console.error("خطا در ارسال ویدیو:", error);
+                });
+            }
+        });
+
+        // بارگذاری ویدیو به تگ video
+        videoInput.addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var videoURL = URL.createObjectURL(file);
+                videoElement.src = videoURL;  // ویدیو را در تگ video نمایش می‌دهد
+
+                // فعال‌سازی دکمه ارسال پس از انتخاب فایل ویدیو
+                uploadButton.disabled = false;
+            }
+        });
+    </script>
+
+</body>
+</html>
