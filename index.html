@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>www.cc-ai.ir</title>
-   <link rel="icon" type="image/x-icon" href="./ccai.png">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.rtl.min.css"
         integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
 
@@ -25,7 +25,9 @@
     <header x-data="{ navShow : false }" @scroll.window="navShow = window.scrollY > 100 ? true : false ">
         <nav class="header navbar navbar-expand-lg navbar-light fixed-top" :class="{'header-scrolled' : navShow}">
             <div class="container">
-                 <a class="navbar-brand" href="#"><img src="./ccai.png" alt="CC-AI Logo" height="40"></a>
+                <a class="navbar-brand" href="#">
+                        <img src="./images/logo.jpg" alt="لوگو" style="height:40px;">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -34,14 +36,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">صفحه اصلی</a>
+                            <a class="nav-link active" aria-current="page" href="#applications">کاربردها</a>
                         </li>
-                        <!-- <li class="nav-item"> -->
-                            <!-- <a class="nav-link">درباره ما</a> -->
-                        <!-- </li> -->
-                        <!-- <li class="nav-item"> -->
-                            <!-- <a class="nav-link">تماس با ما</a> -->
-                        <!-- </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#capabilities">قابلیت ها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#packages">بسته ها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#footer">درباره ما</a>
+                        </li>
+                  
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#footer">تماس با ما</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -49,195 +58,588 @@
     </header>
 
     <!-- Intro -->
-    <section class="intro d-flex align-items-center overflow-hidden">
-        <div class="container">
-            <div class="row align-items-center mt-5 mt-lg-0">
-                <div class="col-lg-6">
-                    <h3 data-aos="fade-up" class="fw-bold text-primary text-center text-lg-start">
-                        شناسایی چهره از طریق دوربین‌های مداربسته
-                    </h3>
-                    <h5 data-aos="fade-up" data-aos-delay="400" class="text-muted mt-4">
-                        تشخیص دقیق و سریع چهره افراد در محیط‌های مختلف با استفاده از تکنولوژی پیشرفته دوربین‌های مداربسته.
-                    </h5>
-                    <button data-aos="fade-up" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScQOgyrZsYBQa2GVOMAcETNlJCZJ_qZ9B2imzxqoox53mq1NA/viewform', '_blank')" data-aos-delay="600" class="btn btn-lg btn-primary hover-grow mt-2">
-                        ثبت سفارش
-                    </button>
-					<!-- دکمه مشاهده دمو -->
-<button data-aos="fade-up" onclick="window.open('facedetection.html', '_blank')" data-aos-delay="600" class="btn btn-lg btn-secondary hover-grow mt-2 ms-3">
-    مشاهده دمو
-</button>
-                </div>
-                <div data-aos="zoom-out" data-aos-delay="400" class="col-lg-6 mt-5 mt-lg-0">
-                    <img class="img-fluid" src="./images/1.png" alt="دوربین مداربسته">
-                </div>
+   <section class="intro d-flex align-items-center overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center mt-5 mt-lg-0">
+            <div class="col-lg-6">
+            <img src="./images/logo.jpg" alt="لوگو" style="height:100px;">
+                <h3 data-aos="fade-up" class="fw-bold text-primary text-center text-lg-start  mb-1"  style="font-size: 3rem; margin-bottom: 0.5rem;">
+                    CCAI 
+                </h3>
+                    <h5 data-aos="fade-up" class="fw-bold text-primary text-center text-lg-start  mb-1"  style="font-size: 1.5rem; margin-bottom: 0.5rem;">
+                    Close Circuit Artificial Intelligence
+                </h5>
+                <h3 data-aos="fade-up" class="fw-bold text-primary text-center text-lg-start">
+هوشمندسازی دوربین های مداربسته
+                </h3>
+                <h5 data-aos="fade-up" data-aos-delay="400" class="text-muted mt-4 justified-text">
+                   کسب آگاهی از رخدادهای مهم در لحظه و در گذشته، از طریق پردازش تصاویر دوربین مداربسته با هوش مصنوعی در محل و به صرفه مبتنی بر آخرین فناوری های روز
+                </h5>
+                <button data-aos="fade-up"   onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdR6o1UemzYiCWYuXqNb71hiKBjdGN9dy5qCgPms7ulKyF4gg/viewform?usp=preview', '_blank')" data-aos-delay="600" class="btn btn-lg btn-primary hover-grow mt-2">
+                    ثبت سفارش
+                </button>
+            </div>
+            <div data-aos="zoom-out" data-aos-delay="400" class="col-lg-6 mt-5 mt-lg-0">
+         <video class="img-fluid" src="./videos/banner.mp4" autoplay loop muted playsinline></video>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- About -->
     <section class="py-5 overflow-hidden">
-        <div class="container">
-            <div class="row gx-0 gy-5 align-items-center">
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="content">
-                        <h3 class="text-primary">فناوری پیشرفته در تشخیص چهره</h3>
-                        <h2 class="fw-bold">تشخیص چهره با دقت بالا و سرعت بی‌نظیر</h2>
-                        <p>
-                            با استفاده از تکنولوژی مدرن دوربین‌های مداربسته، امکان تشخیص چهره افراد در محیط‌های مختلف فراهم شده است. این سیستم‌ها قابلیت شناسایی دقیق و سریع چهره افراد را دارند و به ارتقاء امنیت و مدیریت هوشمند کمک می‌کنند.
-                        </p>
-                       <button data-aos="fade-up" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScQOgyrZsYBQa2GVOMAcETNlJCZJ_qZ9B2imzxqoox53mq1NA/viewform', '_blank')" data-aos-delay="600" class="btn btn-lg btn-primary hover-grow mt-2">
-                                ثبت سفارش
-                            </button>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="200">
-                    <img class="img-fluid" src="./images/2.png" alt="تشخیص چهره">
+    <div class="container">
+        <div class="row gx-0 gy-5 align-items-center">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="content">
+                    <h3 class="text-primary">چرا CCAI ؟</h3>
+                    <h2 class="fw-bold">دقیق، سریع و به صرفه</h2>
+                    <p class="justified-text">
+با بهره مندی از متخصصان با تجربه، فناوری های روز و آگاهی از نیاز بازار، موفق شدیم تعادلی بین دقت، سرعت و هزینه در محصولات خود ایجاد کنیم.
+                    </p>
+                    <!-- <button class="btn btn-primary hover-grow">اطلاعات بیشتر</button> -->
                 </div>
             </div>
+            <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="200">
+         <video class="img-fluid" src="./videos/face-detection.mp4" autoplay loop muted playsinline></video>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Values and Features -->
-    <section class="py-5 overflow-hidden">
+
+    <!-- Values -->
+    <section id="applications" class="py-5 overflow-hidden">
         <div class="container">
             <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-md-12">
-                    <h2 class="fw-bold text-primary">بینش هوشمند، امنیت پایدار</h2>
-                    <p>با دوربین‌های مداربسته، فراتر از نظارت؛ تحلیل و امنیت در یک نگاه</p>
-                </div>
-              
+               <div class="col-12 text-center">
+    <h2 class="fw-bold text-primary">کاربردها در صنایع و بخش های مختلف</h2>
+    <p>امروزه دوربین های مداربسته در همه مکان ها و صنایع مختلف استفاده شده اند. منبع داده بی نظیری که می توان از طریق آن مسائل متعدد و متنوعی را حل کرد. </p>
+</div>
             </div>
-
-            <div class="row g-2" data-aos="fade-up" data-aos-delay="400">
-                <!-- Card 1: تشخیص چهره -->
-                <div class="col-md-12 col-lg-12">
-                    <div class="card shadow">
-                      
-                    <div class="service-box blue">
-                        <video controls class="w-100">
-                            <source src="./videos/face-detection.mp4" type="video/mp4">
-                            مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
-                        </video>
-                       
-                    </div>
-              
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">تشخیص چهره هوشمند</h5>
-							 <p>سیستم تشخیص چهره ما با بهره‌گیری از الگوریتم‌های پیشرفته و دقیق، قادر است چهره افراد را با تحلیل نقاط کلیدی صورت شناسایی کند. این فناوری هوشمند، امنیت و کارایی را به سطح جدیدی ارتقا می‌دهد.</p>
-    <ul>
-        <li><strong>بدون نیاز به دوربین خاص:</strong> شما نیازی به استفاده از دوربین‌های خاص با قابلیت تشخیص چهره ندارید؛ زیرا نرم‌افزار ما با تمامی دوربین‌های مداربسته سازگار بوده و می‌تواند چهره افراد را با دقت بالا شناسایی کند.</li>
-        <li><strong>دقت بالا بدون تأثیر عوامل ظاهری:</strong> ریش، سیبیل، عینک آفتابی و سایر تغییرات ظاهری تأثیری بر دقت سیستم نخواهند داشت. الگوریتم پیشرفته ما حتی در شرایط نوری متفاوت، عملکرد مطلوبی ارائه می‌دهد.</li>
-        <li><strong>دسترسی آسان از طریق وب:</strong> لیست چهره‌های ثبت‌شده و گزارش‌های مربوطه از طریق نرم‌افزار تحت وب در دسترس کاربران مجاز قرار دارد. مدیران و کاربران تأییدشده می‌توانند در هر زمان و مکان، اطلاعات ثبت‌شده را بررسی کنند و گزارش‌های لازم را دریافت نمایند.</li>
-    </ul>
-    <p><strong>با نرم‌افزار تشخیص چهره ما، امنیت، دقت و مدیریت داده‌ها را در کنار هم تجربه کنید!</strong></p>
-                            <button data-aos="fade-up" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScQOgyrZsYBQa2GVOMAcETNlJCZJ_qZ9B2imzxqoox53mq1NA/viewform', '_blank')" data-aos-delay="600" class="btn btn-lg btn-primary hover-grow mt-2">
-                                ثبت سفارش
-                            </button>
-                        </div>
-                    </div>
-                </div>
+           
+		   <div class="row g-2" data-aos="fade-up" data-aos-delay="400">
+    <!-- Card 1: کنترل تردد هوشمند -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+            <img src="./images/taradod.jpg" class="card-img-top" alt="تشخیص چهره">
+            <div class="card-body">
+                <h5 class="card-title fw-bold text-primary">کنترل تردد </h5>
+                <p class="card-text justified-text">
+با تشخیص چهره، پلاک و محدوده، به صورت خودکار تردد افراد و وسایل نقلیه مدیریت می شود. با این راه‌حل، علاوه بر افزایش امنیت، می‌توان به دقت ساعات کاری پرسنل و ترددهای غیرمجاز را کنترل کرد.                </p>
+                <!-- <a href="#" class="btn btn-lg btn-primary hover-grow mt-2">مشاهده بیشتر</a> -->
+				    
             </div>
-			
+        </div>
+    </div>
 
+    <!-- Card 2: خرده‌فروشی و فروشگاه‌ها -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+            <img src="./images/retail4.png" class="card-img-top" alt="تشخیص آتش و دود">
+            <div class="card-body">
+                <h5 class="card-title fw-bold text-primary">خرده‌فروشی و فروشگاه‌ها</h5>
+                <p class="card-text justified-text">
+ با شناسایی بدن و حالت چهره امکان درک رفتار مشتریان، کاهش زمان انتظار در صف و افزایش فروش، بهینه‌سازی چیدمان قفسه ها و افزایش تجربه خرید مشتریان و جلوگیری از سرقت فراهم می شود.               </p>
+                <!-- <a href="#" class="btn btn-lg btn-primary hover-grow mt-2">مشاهده بیشتر</a> -->
+		
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3: ساختمان و پروژه های عمرانی -->
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+            <img src="./images/building.png" class="card-img-top" alt="تحلیل رفتار">
+            <div class="card-body justified-text">
+                <h5 class="card-title fw-bold text-primary">ساختمان و پروژه های عمرانی</h5>
+                <p class="card-text">
+با شناسایی حالت بدن، کلاه ایمنی و محدوده ها در تصویر، خطرات احتمالی و پیشرفت کار شناسایی می شود. این راهکارها باعث کاهش حوادث، افزایش بهره وری و مدیریت دقیق تر منابع می شود.                </p>
+                <!-- <a href="#" class="btn btn-lg btn-primary hover-grow mt-2">مشاهده بیشتر</a> -->
+				  
+            </div>
+        </div>
+    </div>
+
+        <!-- Card 2: تولید و کارخانه ها-->
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+            <img src="./images/manufactor.png" class="card-img-top" alt="تشخیص آتش و دود">
+            <div class="card-body justified-text">
+                <h5 class="card-title fw-bold text-primary">تولید و کارخانه ها</h5>
+                <p class="card-text">
+با شناسایی ایرادات محصولات کیفیت و کارایی ارتقا می یابد و با تحلیل فرآیند تولید، می توان گلوگاه های احتمالی را کشف کرد. این راهکارها منجر به کاهش ضایعات و افزایش بهره‌وری کلی کارخانه می‌شوند.                </p>
+                <!-- <a href="#" class="btn btn-lg btn-primary hover-grow mt-2">مشاهده بیشتر</a> -->
+		
+            </div>
+        </div>
+    </div>
+
+        <!-- Card 2: شهری و حمل و نقل-->
+        <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+            <img src="./images/urbon2.png" class="card-img-top" alt="تشخیص چهره">
+            <div class="card-body">
+                <h5 class="card-title fw-bold text-primary">شهری و حمل و نقل</h5>
+                <p class="card-text justified-text">
+با شناسایی خودروها در تصاویر امکان تشخیص سریع تصادفات، مدیریت ترافیک و پارکینگ ها فراهم می شود که منجر به کاهش زمان سفر، افزایش ایمنی و بهبود کیفیت زندگی شهری می شود.                </p>
+                <!-- <a href="#" class="btn btn-lg btn-primary hover-grow mt-2">مشاهده بیشتر</a> -->
+				   
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3: سلامت و بیمارستان ها-->
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+            <img src="./images/hospital2.png" class="card-img-top" alt="تحلیل رفتار">
+            <div class="card-body justified-text">
+                <h5 class="card-title fw-bold text-primary">سلامت و بیمارستان ها</h5>
+                <p class="card-text">
+با شناسایی حالت بدن و حالت چهره، می توان به مراقبت دقیق تر، امن تر و مستمر از بیماران و سالمندان پرداخت. مثلا می توان سقوط آن ها را شناسایی و به کادر درمان هشدار داد.                </p>
+                <!-- <a href="#" class="btn btn-lg btn-primary hover-grow mt-2">مشاهده بیشتر</a> -->
+				  
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
     </section>
+
+
+
+        <!-- Services -->
+  <section id="capabilities" class="services py-5 overflow-hidden">
+    <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="fw-bold">قابلیت های هوش مصنوعی CCAI</h2>
+<p>            
+        قابلیت های اصلی شامل شناسایی و طبقه بندی موجودیت های مختلف در تصویر، شناسایی اضلاع و حالات بدن و ناحیه بندی تصاویر است.
+            </p>
+        </div>
+        <div class="row gy-3" data-aos="fade-up" data-aos-delay="400">
+            <!-- ویدیو مربوط به شناسایی و طبقه بندی موجودیت ها -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-box blue">
+         <video class="img-fluid" src="./videos/face-detection.mp4" autoplay loop muted playsinline></video>
+                    <h3 class="fw-bold mt-3">شناسایی و طبقه بندی </h3>
+                    <p class="justified-text">
+ شناسایی و طبقه بندی موجودیت های مختلف مانند شناسایی چهره در تصویر و تشخیص هویت یا حالات چهره شناسایی شده، شناسایی پلاک خودرو در تصویر و تعیین شماره آن، یا شناسایی بدن انسان یا دیگر اشیاء موجود در تصویر و طبقه بندی هر کدام است.                     </p>
+                    <!-- <a class="read-more mt-5" href="#"> -->
+                        <!-- <span>مشاهده بیشتر</span> -->
+                        <!-- <i class="bi bi-arrow-left"></i> -->
+                    <!-- </a> -->
+                </div>
+            </div>
+
+            <!-- ویدیو مربوط به شناسایی اضلاع بدن -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-box orange">
+                  <video class="img-fluid" src="./videos/pose.mp4" autoplay loop muted playsinline></video>
+
+                    <h3 class="fw-bold mt-3">شناسایی حالات بدن</h3>
+                   <p class="justified-text"> شناسایی حالات بدن شامل تشخیص اسکلت بدن و حرکات و ژست‌های انسان، مانند تشخیص سقوط یا زمین خوردن افراد، تشخیص ژست‌های خاص، تشخیص درگیری، تشخیص دزدی و یا حوادث مرتبط با انسان در یک محیط است.                    </p>
+                    <!-- <a class="read-more mt-5" href="#"> -->
+                        <!-- <span>مشاهده بیشتر</span> -->
+                        <!-- <i class="bi bi-arrow-left"></i> -->
+                    <!-- </a> -->
+                </div>
+            </div>
+
+            <!-- ویدیو مربوط به ناحیه بندی تصویر -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-box green">
+                        <video class="img-fluid" src="./videos/segmentation.mp4" autoplay loop muted playsinline></video>
+
+                    <h3 class="fw-bold mt-3">ناحیه بندی تصویر</h3>
+                    <p class="justified-text">
+ناحیه‌بندی تصویر شامل تفکیک یک تصویر به چندین ناحیه یا پیکسل‌های مجزا و اختصاص دادن برچسب به هر ناحیه است. این قابلیت به ما کمک می‌کند تا مرز اشیاء را با دقت بالا مشخص کنیم و هر شیء را به صورت جداگانه مورد تحلیل قرار دهیم.                    </p>
+                    <!-- <a class="read-more mt-5" href="#"> -->
+                        <!-- <span>مشاهده بیشتر</span> -->
+                        <!-- <i class="bi bi-arrow-left"></i> -->
+                    <!-- </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Features -->
     <section class="features py-5 overflow-hidden">
         <div class="container">
             <div class="row" data-aos="fade-up" data-aos-delay="200">
-                <h4 class="mb-5"> برخی از امکانات بی نظیر نرم افزار AI_VISION.</h4>
+                <h4 class="mb-5"> دیگر امکانات سامانه CCAI</h4>
             </div>
-            <div class="row align-items-center" data-aos="fade-up" data-aos-delay="400">
-                <div class="col-lg-4 my-4">
-                    <img class="img-fluid" src="./images/features/1.png" alt="" srcset="">
+       <div class="row align-items-center" data-aos="fade-up" data-aos-delay="400">
+    <div class="col-lg-4 my-4">
+        <img class="img-fluid" src="./images/features/1.png" alt="" srcset="">
+    </div>
+    <div class="col-lg-8">
+        <div class="row gy-3">
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <i class="bi bi-diagram-3 me-3"></i>
+                    <div>
+                        <h5>تجمیع پذیری</h5>
+                        <p class="text-muted justified-text">
+این سامانه با محصولات و زیرساخت های شرکت های مختلف از قبیل دستگاه های ذخیره ساز و دوربین ها در انواع مختلف قابل تجمیع است.                 </p>
+                    </div>
                 </div>
-                <div class="col-lg-8">
-                    <div class="row gy-3">
-                        <div class="col-md-6">
-                            <div class="d-flex">
-                                <i class="bi bi-folder-fill me-3"></i>
-                                <div>
-                                    <h5>محیط گرافیکی ساده و زیبا</h5>
-                                    <p class="text-muted">
-                                        محیط گرافیکی جدید شامل جستجوی خودکار دوربین‌ها، پنل جدید مدیریت آلارم و امکانات مدرن دیگر.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            </div>
 
-                        <div class="col-md-6">
-                            <div class="d-flex">
-                                <i class="bi bi-stack me-3"></i>
-                                <div>
-                                    <h5>آپدیت رایگان</h5>
-                                    <p class="text-muted">
-                                        نرم‌افزار جامع نظارت تصویری با پشتیبانی و دریافت آپدیت‌های متناوب از شرکت سازنده.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <i class="bi bi-stack me-3"></i>
+                    <div>
+                        <h5>مقیاس پذیری</h5>
+                        <p class="text-muted justified-text">
+در صورت افزایش تعداد دوربین ها و رخدادها، امکان گسترش بخش های مختلف سامانه و افزایش توان پردازش تصویر و ذخیره سازی و ارسال هشدار وجود دارد.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="col-md-6">
-                            <div class="d-flex">
-                                <i class="bi bi-envelope-fill me-3"></i>
-                                <div>
-                                    <h5>تجمیع تصاویر</h5>
-                                    <p class="text-muted">
-                                        مشاهده یکجای تمامی تصاویر از دوربین‌های IP، دستگاه‌های NVR و DVR تنها از یک کلاینت واحد.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <i class="bi bi-file-earmark-code-fill me-3"></i>
+                    <div>
+                        <h5>توسعه پذیری</h5>
+                        <p class="text-muted justified-text">
+امکان توسعه قابلیت های سامانه در بخش هوش مصنوعی و گزارش گیری متناسب با نیاز مخاطبین وجود دارد. می توان رخدادها یا گزارش های جدیدی تعریف کرد.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="col-md-6">
-                            <div class="d-flex">
-                                <i class="bi bi-credit-card-2-front-fill me-3"></i>
-                                <div>
-                                    <h5>جامع‌ترین آنالیتیک‌های هوش مصنوعی</h5>
-                                    <p class="text-muted">
-                                        نرم‌افزار AI_VISION شامل آنالیتیک‌های هوشمند با دقت بالا، مناسب برای هر نوع دوربین مداربسته
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <i class="bi bi-life-preserver me-3"></i>
+                    <div>
+                        <h5>پشتیبانی</h5>
+                        <p class="text-muted justified-text">
+سامانه های هوش مصنوعی برخلاف دیگر سامانه های سنتی، نیاز به پایش و بروزرسانی دائم مدل ها دارند. در نتیجه پشتیبانی سامانه به صورت سالیانه قابل تمدید است.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="col-md-6">
-                            <div class="d-flex">
-                                <i class="bi bi-cloud-check-fill me-3"></i>
-                                <div>
-                                    <h5>پشتیبانی از تمامی برندها</h5>
-                                    <p class="text-muted">
-                                        پشتیبانی کامل از دوربین‌های مداربسته، دستگاه‌های ذخیره‌ساز NVR و DVR.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <i class="bi bi-file-earmark-bar-graph me-3"></i>
+                    <div>
+                        <h5>گزارش گیری جامع</h5>
+                        <p class="text-muted justified-text">
+مخاطبین می توانند از رخدادهایی که در لحظه یا در گذشته شناسایی می شوند به صورت جامع و کاربرپسند در گوشی یا رایانه از داخل یا خارج مجموعه خود گزارش بگیرند.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="col-md-6">
-                            <div class="d-flex">
-                                <i class="bi bi-file-earmark-code-fill me-3"></i>
-                                <div>
-                                    <h5>امکان ارائه API</h5>
-                                    <p class="text-muted">
-                                        نرم‌افزار AI_VISION قابلیت ارائه API و SDK برای سفارشی‌سازی توسط برنامه‌نویسان را داراست.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <i class="bi bi-bell-fill me-3"></i>
+                    <div>
+                        <h5>ارسال هشدار</h5>
+                        <p class="text-muted justified-text">
+برای آگاهی از رخدادهایی که در لحظه شناسایی می شوند، به گوشی همراه هشدار ارسال می شود. این هشدار یا در پیامک یا در پیام رسان های رایج می تواند انجام شود.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+        </div>
     </section>
 
 
-    <footer class="footer">
-       
-        <div class="container-fluid text-center py-4" style="background-color: #f6f9ff;">
-            <h5 class="fw-bold">تمامی حقوق سایت متلعق به استارت آپ cc-ai می باشد</h5>
+<!-- Pricing -->
+<section id="packages" class="pricing py-5 overflow-hidden">
+    <div class="container">
+        <div class="row mb-4 text-center" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="fw-bold">بسته های محصول/خدمت</h2>
+            <p>بسته های محصولات یا خدمات CCAI به شرح زیر می باشد. </p>
         </div>
+        <div class="row justify-content-center g-4 text-center">
+            <div class="col-md-6 col-lg-4" data-aos="flip-right" data-aos-delay="400">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h4 class="fw-bold" style="color: #65c600;">بسته پایه</h4>
+                        <div> ۷۳ تا ۱۱۸ <sup>میلیون تومان</sup> / لایسنس دائمی </div>
+                        <img src="./images/pricing/2.png" class="img-fluid p-4" alt="پلن پایه">
+                        <ul class="list-unstyled">
+                            <li class="my-2">حداکثر ۴ دوربین</li>
+                            <li class="my-2">نصب، راه اندازی و آموزش سامانه</li>
+                            <li class="my-2">گزارش‌گیری روزانه</li>
+                            <li class="my-2">امکان سفارشی سازی</li>
+                            <li class="my-2">پشتیبانی ۶ ماه اول رایگان</li>
+                            <li class="my-2">پشتیبانی  (اختیاری):</li>                            
+                        <div>  ۱ تا ۴ <sup>میلیون تومان</sup> / سال</div>
+
+                        </ul>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR6o1UemzYiCWYuXqNb71hiKBjdGN9dy5qCgPms7ulKyF4gg/viewform?usp=preview" target="_blank" class="text-decoration-none">
+                            <button class="btn btn-outline-primary mt-4">سفارش بسته</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="flip-right" data-aos-delay="500">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h4 class="fw-bold" style="color: #ff901c;">بسته حرفه‌ای</h4>
+                        <div> ۱۵۸ تا ۲۱۸ <sup>میلیون تومان</sup> / لایسنس دائمی</div>
+                        <img src="./images/pricing/3.png" class="img-fluid p-4" alt="پلن حرفه‌ای">
+                        <ul class="list-unstyled">
+                            <li class="my-2">حداقل ۵ و حداکثر ۸ دوربین</li>
+                            <li class="my-2">نصب، راه اندازی و آموزش سامانه</li>
+                            <li class="my-2">گزارش‌گیری روزانه</li>
+                            <li class="my-2">هشدار لحظه ای</li>
+                            <li class="my-2">امکان سفارشی سازی</li>
+                            <li class="my-2">پشتیبانی ۶ ماه اول رایگان</li>
+                            <li class="my-2">پشتیبانی ۷*۲۴ (اختیاری):</li>
+                            <div>  ۱۰ تا ۱۶ <sup>میلیون تومان</sup> / سال </div>
+                        </ul>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR6o1UemzYiCWYuXqNb71hiKBjdGN9dy5qCgPms7ulKyF4gg/viewform?usp=preview" target="_blank" class="text-decoration-none">
+                            <button class="btn btn-outline-primary mt-4">سفارش بسته</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="flip-right" data-aos-delay="600">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h4 class="fw-bold" style="color: #ff0071;">بسته سازمانی</h4>
+                        <div> حداقل ۳۴۵ <sup>میلیون تومان</sup> / لایسنس دائمی </div>
+                        <img src="./images/pricing/4.png" class="img-fluid p-4" alt="پلن سازمانی">
+                        <ul class="list-unstyled">
+                      <li class="my-2">حداقل ۹ دوربین</li>
+                            <li class="my-2">نصب، راه اندازی و آموزش سامانه</li>
+                            <li class="my-2">گزارش‌گیری روزانه</li>
+                            <li class="my-2">هشدار لحظه ای</li>
+                            <li class="my-2">امکان سفارشی سازی</li>
+                            <li class="my-2">پشتیبانی ۶ ماه اول رایگان</li>
+                            <li class="my-2">پشتیبانی ویژه (اختیاری):</li>
+                            <div>  حداقل ۲۷ <sup>میلیون تومان</sup> / سال </div>
+                        </ul>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR6o1UemzYiCWYuXqNb71hiKBjdGN9dy5qCgPms7ulKyF4gg/viewform?usp=preview" target="_blank" class="text-decoration-none">
+                        <button class="btn btn-outline-primary mt-4">سفارش بسته</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact -->
+    <!-- <section class="contact py-5 overflow-hidden">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <h2 class="fw-bold">ارتباط با ما</h2>
+            </div>
+            <div class="row gy-3">
+                <div class="col-lg-6">
+                    <div class="row gy-4">
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <i class="bi bi-geo-alt"></i>
+                                <h5 class="fw-bold">آدرس</h5>
+                                <p>دفتر مرکزی<br>تهران مرکز نوآوری نکسترا</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <i class="bi bi-telephone"></i>
+                                <h5 class="fw-bold">شماره تماس</h5>
+                                <p class="cellphone">+98 910 000 0000<br>+98 910 000 0000</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <i class="bi bi-envelope"></i>
+                                <h5 class="fw-bold">ایمیل</h5>
+                                <p>info@ccai.ir<br>contact@ccai.ir</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <i class="bi bi-clock"></i>
+                                <h5 class="fw-bold">پشتیبانی</h5>
+                                <p>شنبه - پنج شنبه<br>09:00 - 05:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form action="#" class="contact-form">
+                        <div class="row  gy-4">
+                            <div class="col-md-6">
+                                <label class="form-label">نام</label>
+                                <input class="form-control" type="text">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">ایمیل</label>
+                                <input class="form-control" type="email">
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label">موضوع</label>
+                                <input class="form-control" type="email">
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label">متن پیام</label>
+                                <textarea class="form-control" rows="2"></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-primary">ارسال پیام</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+ -->
+
+    <!-- <footer class="footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-5">
+                    <h3 class="fw-bold">WWW.CCAI.IR</h3>
+                    <p>تحولی در امنیت و مدیریت تصاویر دوربین‌های مداربسته</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a class="mx-2" href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="mx-2" href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 offset-lg-1 col-6">
+                    <h5>لینک ها</h5>
+                    <hr class="bg-primary">
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#"> <i class="bi bi-chevron-left"></i> صفحه اصلی</a></li>
+                        <li class="mt-2"><i class="bi bi-chevron-left"></i> <a href="#">محصولات</a></li>
+                        <li class="mt-2"><i class="bi bi-chevron-left"></i> <a href="#">خدمات</a></li>
+                        <li class="mt-2"><i class="bi bi-chevron-left"></i> <a href="#">درباره ما</a></li>
+                        <li class="mt-2"><i class="bi bi-chevron-left"></i> <a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+<div class="col-lg-2 col-6">
+    <h5>خدمات</h5>
+    <hr class="bg-primary">
+    <ul class="list-unstyled footer-links">
+        <li><i class="bi bi-chevron-left"></i> <a href="#">تشخیص چهره</a></li>
+        <li class="mt-2"><i class="bi bi-chevron-left"></i> <a href="#">تشخیص آتش و دود</a></li>
+        <li class="mt-2"><i class="bi bi-chevron-left"></i> <a href="#">شمارش افراد و اشیاء</a></li>
+        <li class="mt-2"><i class="bi bi-chevron-left"></i> <a href="#">هوش مصنوعی برای تحلیل تصاویر</a></li>
+        <li class="mt-2"><i class="bi bi-chevron-left"></i> <a href="#">اتوماسیون سیستم‌های امنیتی</a></li>
+    </ul>
+</div>
+
+
+                <div class="col-lg-2 col-6">
+                    <h5>ارتباط با ما</h5>
+                    <hr class="bg-primary">
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="bi bi-chevron-left"></i> <a href="#">درباره ما</a></li>
+                        <li class="mt-2"><i class="bi bi-chevron-left"></i> <a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="container-fluid text-center py-4" style="background-color: #f6f9ff;">
+            <h5 class="fw-bold">WWW.CC-AI.IR</h5>
+            <p>استارتاپ CCAI</p>
+        </div> -->
+<footer class="bg-dark text-white pt-5 pb-4">
+<section id="footer" class="contact py-5 overflow-hidden">
+        <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start g-4">
+            
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-warning">
+                    CCAI
+                </h5>
+       <p class="justified-text">
+CCAI یک تیم جوان و متخصص هوش مصنوعی است که از سال ۱۳۹۷ با انگیزه تحقیق و توسعه در زمینه پردازش تصویر شکل گرفت. با توجه به رویکرد مساله محور این تیم، به تدریج به یک استارتاپ تبدیل شد و به دنبال حل مسائل فراگیر جامعه در این زمینه برآمد. امروزه دوربین های مداربسته به صورت گسترده مورد استفاده هستند و به عنوان یکی از مهمترین منابع داده های تصویری، برای این تیم هدف گذاری شد. هدف ما ارائه بهترین راه حل ها برای کاهش مسائل و افزایش بهره وری مخاطبین از دوربین های مدار بسته است.
+                </p>
+
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-warning">
+                    لینک‌های سریع
+                </h5>
+                <p>
+                    <a href="#applications" class="text-white" style="text-decoration: none;">کاربردها</a>
+                </p>
+                       <p>
+                    <a href="#capabilities" class="text-white" style="text-decoration: none;">قابلیت ها</a>
+                </p>
+                <p>
+                    <a href="#packages" class="text-white" style="text-decoration: none;">بسته ها</a>
+                </p>
+                <p>
+                    <a href="#footer" class="text-white" style="text-decoration: none;">درباره ما</a>
+                </p>
+                <p>
+                    <a href="#footer" class="text-white" style="text-decoration: none;">تماس با ما</a>
+                </p>
+         
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-warning">
+                    تماس با ما
+                </h5>
+                <p class="justified-text">
+                    <i class="bi bi-geo-alt me-3 "></i> تهران، خیابان کارگر شمالی، پردیس فنی دانشگاه تهران، دانشکده مکانیک قدیم، مرکز نوآوری نکسترا
+                </p>
+               
+                <p>
+                    <i class="bi bi-phone me-3"></i> 09335262523
+                </p>
+                
+                <hr class="mb-4">
+
+                <div class="d-flex justify-content-center justify-content-md-start">
+                    <a href="#" class="text-white me-4">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white me-4">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-white me-4">
+                        <i class="fab fa-telegram fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="mb-4">
+
+        <div class="row d-flex justify-content-center">
+            <p class="text-center">
+                © 2025 تمامی حقوق این وب‌سایت متعلق به CCAI است.
+            </p>
+        </div>
+    </div>
+   </section>
+</footer>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
